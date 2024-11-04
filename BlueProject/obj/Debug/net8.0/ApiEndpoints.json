@@ -1,0 +1,230 @@
+[
+  {
+    "ContainingType": "BlueProject.Controllers.TransactionsController",
+    "Method": "GetAllTransactions",
+    "RelativePath": "api/Transactions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BlueProject.Models.Transaction, BlueProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlueProject.Controllers.TransactionsController",
+    "Method": "CreateTransaction",
+    "RelativePath": "api/Transactions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transaction",
+        "Type": "BlueProject.Models.Transaction",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlueProject.Controllers.TransactionsController",
+    "Method": "GetTransaction",
+    "RelativePath": "api/Transactions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BlueProject.Models.Transaction",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlueProject.Controllers.TransactionsController",
+    "Method": "GetTransactionsByDateRange",
+    "RelativePath": "api/Transactions/date-range",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BlueProject.Models.Transaction, BlueProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlueProject.Controllers.TransactionsController",
+    "Method": "GetFilteredTransactions",
+    "RelativePath": "api/Transactions/filter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filter",
+        "Type": "BlueProject.Models.DTO.TransactionFilterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BlueProject.Models.Transaction, BlueProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlueProject.Controllers.TransactionsController",
+    "Method": "GetFilteredTransactions",
+    "RelativePath": "api/Transactions/filter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "transactionType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BlueProject.Models.Transaction, BlueProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlueProject.Controllers.TransactionsController",
+    "Method": "GetTransactionsByType",
+    "RelativePath": "api/Transactions/type/{transactionType}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transactionType",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BlueProject.Models.Transaction, BlueProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlueProject.Controllers.TransactionsController",
+    "Method": "GetTransactionsByUserId",
+    "RelativePath": "api/Transactions/user/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BlueProject.Models.Transaction, BlueProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlueProject.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BlueProject.WeatherForecast, BlueProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
