@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlueProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e29dfd97b8c7fd12da09f27ba3f91a236bc6e0f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlueProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlueProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
