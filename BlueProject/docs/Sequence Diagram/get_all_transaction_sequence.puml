@@ -1,0 +1,32 @@
+@startuml
+actor User
+participant Client
+participant Controller
+participant "Service Layer"
+participant "Data Access Layer"
+participant Database
+
+
+title Get Transactions By Date Range
+
+User -> Client: Initiate Request
+note right of Client
+   /api/Transactions/date-range
+end note
+Client -> Controller: Send HTTP GET Request
+Controller -> "Service Layer": Call Business Logic
+"Service Layer" -> "Data Access Layer": Query Data
+"Data Access Layer" -> Database: Retrieve All Tranactions
+Database --> "Data Access Layer": Return transactions
+"Data Access Layer" --> "Service Layer": Return transactions
+"Service Layer" --> Controller: Send tranactions
+
+note right of "Data Access Layer"
+   SELECT * FROM Transactions
+WHERE transaction_date BETWEEN ? AND ?
+AND transaction_type = ?;
+end note
+
+Controller --> Client: Send HTTP Response
+Client -> User: Display transactions
+@enduml

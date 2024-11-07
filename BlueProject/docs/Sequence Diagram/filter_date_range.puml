@@ -1,0 +1,30 @@
+@startuml
+actor User
+participant Client
+participant Controller
+participant "Service Layer"
+participant "Data Access Layer"
+participant Database
+
+
+title Filter Tranastions By Transaction Type
+
+User -> Client: Initiate Request
+
+Client -> Controller: Send HTTP GET Request 
+note right of Client
+   /api/Transactions/type/{transactionType}
+end note
+
+
+Controller -> "Service Layer": Forward transactionType
+
+"Service Layer" -> "Data Access Layer": Query Data by transactiontype
+"Data Access Layer" -> Database: Retrieve transaction by type
+Database --> "Data Access Layer": Return transaction
+"Data Access Layer" --> "Service Layer": Return transaction
+"Service Layer" --> Controller: Send tranaction
+
+Controller --> Client: Send HTTP Response
+Client -> User: Display transaction
+@enduml
